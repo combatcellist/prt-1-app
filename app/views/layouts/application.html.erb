@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyApp</title>
+    <title>Youm!!!</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +11,7 @@
 
   <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
   <%= render "shared/header" %>
+  <%= render "shared/toast" %>
     <%= yield %>
   <%= render "shared/footer" %>
   </body>
