@@ -7,6 +7,9 @@
     <ul id=nav>
      <% if user_signed_in? %>
         <li>
+          <%= link_to "メニュー投稿", new_item_path %>
+        </li>
+        <li>
           <%= link_to "プロフィール", new_profile_path %>
         </li>
         <li>

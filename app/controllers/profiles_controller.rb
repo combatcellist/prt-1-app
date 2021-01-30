@@ -1,5 +1,7 @@
 class ProfilesController < ApplicationController
 
+  before_action :find_profile, only: [:update, :edit]
+
   def new
     @profile = Profile.new
   end
@@ -9,6 +11,7 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.new(profile_params)
+    @profile.user = current_user
     if @profile.save
       redirect_to root_path, notice: "プロフィール登録が完了しました"
     else
