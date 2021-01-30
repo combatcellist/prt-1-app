@@ -11,9 +11,12 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @comment = Comment.new
+    @comments = @item.comments.includes(:user)
   end
 
   def show
+
   end
 
   def create
